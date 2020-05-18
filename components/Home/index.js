@@ -1,11 +1,19 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 const Home = ({navigation}) => {
   const handlePress = () => {};
   return (
     <View>
-      <Text>Welcome user</Text>
+      <View style={styles.container}>
+        <Text>Welcome user</Text>
+      </View>
       <View>
         <Text>Personal data</Text>
       </View>
