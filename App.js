@@ -40,8 +40,7 @@ console.log('env', process.env, FAKE_API_REST);
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
-  const [isLogged, setLogged] = useState(false);
-  console.log('isLogged', isLogged);
+  const [isLogged, setLogged] = useState(true);
   return (
     <>
       <NavigationContainer>

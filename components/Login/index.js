@@ -34,11 +34,9 @@ const Login = ({navigation}) => {
     });
   };
   const handlePress = async evt => {
-    console.log('evt::', state);
     if (state.email && state.password) {
       const data = await post({});
-      setContextFunc(true);
-      console.log('data:::', data);
+      if (data.code === 201) return setContextFunc(true);
     }
   };
 
@@ -65,7 +63,7 @@ const Login = ({navigation}) => {
           />
         </View>
         <View>
-          <Button title="Signin" onPress={handlePress} />
+          <Button title="Signup" onPress={handlePress} />
         </View>
       </View>
     </View>
